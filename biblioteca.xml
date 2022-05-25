@@ -69,18 +69,18 @@ siempre tiene que ir en la primera línea de un documento XML-->
             <indice_revista>
             INDICE 
                 1.Electrico.................1
-                2.Renting..................15
+                2.F1.......................15
                 3.Lo ultimo................38
             </indice_revista>
             <seccion_revista numero_de_pag="14">
                     <contenido_revista inf="https://www.autobild.es/coche-electrico"/>
             </seccion_revista>
-            <seccion numero_de_pag="23">
-                    <contenido_revista inf="https://www.autobild.es/renting-coches?_ga=2.46041380.1088527326.1653499395-1687173945.1653499395&_gac=1.61531486.1653499395.CjwKCAjwp7eUBhBeEiwAZbHwkQKdk-h7EvhBttZF6-YFgqZdp2vGkpEHKO3PiKXQ2DQ1HLKpQWqAqxoCDgYQAvD_BwE"/>
+            <seccion_revista numero_de_pag="23">
+                    <contenido_revista inf="https://www.autobild.es/formula1"/>
             </seccion_revista>
-            <seccion numero_de_pag="13">
-                    <contenido_revista inf="https://www.autobild.es/ultimo">
-            </seccion>
-        <revista>
+            <seccion_revista numero_de_pag="13">
+                    <contenido_revista inf="https://www.autobild.es/ultimo"/>
+            </seccion_revista>
+        </revista>
 
 </biblioteca>

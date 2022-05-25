@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE biblioteca [
+    <!--Definición de elementos-->
+    <!ELEMENT biblioteca(libros,revistas,periodicos)>
+    <!ELEMENT libro(libro)>
+    <!ELEMENT libro(titulo,capitulos,indice,sinopsis)>
+    <!ELEMENT periodicos(tipo_clase,fecha_publicacion)>
+    <!ELEMENT revistas()
+    
+]

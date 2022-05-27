@@ -2,7 +2,7 @@
 <!--Arriba se encuentra la instrucción de procesamiento o prólogo, 
 siempre tiene que ir en la primera línea de un documento XML-->
 
-<!DOCTYPE nota SYSTEM "estructura.dtd">
+<!DOCTYPE nota SYSTEM "estructuras.dtd">
 
 <biblioteca>
         <libro Id="L0001" tipo_clase="novela" numero_de_paginas="158">

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="biblioteca">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="libro" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="titulo" />
+						<xs:element neme="capitulo" />
+                        <xs:element name="indice" />
+                        <xs:element name="sinopsis" />
+					</xs:sequence>
+					<xs:attribute name="ID">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:minInclusive value="L0000"/>
+								<xs:maxInclusive value="L9999"/>
+							</xs:restriction>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="tipo_de_clase">
+						<xs:simpleType>
+                            <xs:restriction base="xs:string">
+								<xs:enumeration value="novela"/>
+                                <xs:enumeration value="infantil"/>
+                                <xs:enumeration value="didactico"/>
+						</xs:simpleType>
+					</xs:attribute>
+                    <xs:attribute name="numero_de_paginas">
+						<xs:simpleType>
+                            <xs:restriction base="xs:integer">
+								<xs:minInclusive value="000"/>
+								<xs:maxInclusive value="999"/>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+</xs:schema>

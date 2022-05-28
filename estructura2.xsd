@@ -1,26 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-<xs:element name="biblioteca">
+<xs:element name="biblioteca2">
 	<xs:complexType>
 		<xs:sequence>
 			<xs:element name="libro" minOccurs="0" maxOccurs="unbounded">
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="titulo" />
-						<xs:element neme="capitulo" />
+						<xs:element name="capitulo">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="contenido_cap" />
+                                        <xs:attribute name="info">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+								                    <xs:length value="50"/>
+                                                </xs:restriction>
+						                    </xs:simpleType>
+                                </xs:sequence>
+                                <xs:attribute name="numero_de_paginas">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:integer">
+								        <xs:minInclusive value="000"/>
+								        <xs:maxInclusive value="999"/>
+						            </xs:simpleType>
+                                </xs:attribute>
+						    </xs:complexType>
+                        </xs:element>
                         <xs:element name="indice" />
                         <xs:element name="sinopsis" />
 					</xs:sequence>
-					<xs:attribute name="ID">
+					<xs:attribute name="Id">
 						<xs:simpleType>
 							<xs:restriction base="xs:string">
 								<xs:minInclusive value="L0000"/>
 								<xs:maxInclusive value="L9999"/>
 							</xs:restriction>
-							</xs:restriction>
 						</xs:simpleType>
 					</xs:attribute>
-					<xs:attribute name="tipo_de_clase">
+					<xs:attribute name="tipo_clase">
 						<xs:simpleType>
                             <xs:restriction base="xs:string">
 								<xs:enumeration value="novela"/>
@@ -31,6 +49,130 @@
                     <xs:attribute name="numero_de_paginas">
 						<xs:simpleType>
                             <xs:restriction base="xs:integer">
+								<xs:minInclusive value="000"/>
+								<xs:maxInclusive value="999"/>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+        <xs:sequence>
+			<xs:element name="periodico" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="seccion_periodico"/>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="articulo" />
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="contenido" />
+                                                    <xs:attribute name="informacion">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
+								                                <xs:length value="500"/>
+                                                            </xs:restriction>
+						                                </xs:simpleType>
+                                                    </xs:attribute>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        <xs:attribute name="autor">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+								                    <xs:length value="100"/>
+                                                </xs:restriction>
+						                    </xs:simpleType>
+                                        </xs:attribute>
+                                    </xs:element
+                                </xs:sequence>
+                                <xs:attribute name="tipo_de_seccion">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:enumeration value="economica"/>
+                                            <xs:enumeration value="opinion"/>
+                                            <xs:enumeration value="deportes"/>
+                                            <xs:enumeration value="nacional"/>
+                                            <xs:enumeration value="internacional"/>
+						            </xs:simpleType>
+                                </xs:attribute>
+						    </xs:complexType>
+                        </xs:element>
+						<xs:element name="indice_periodico"/>
+					</xs:sequence>
+					<xs:attribute name="Id">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:minInclusive value="P0000"/>
+								<xs:maxInclusive value="P9999"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="tipo_clase">
+						<xs:simpleType>
+                            <xs:restriction base="xs:string">
+								<xs:enumeration value="nacional"/>
+                                <xs:enumeration value="internacional"/>
+						</xs:simpleType>
+					</xs:attribute>
+                    <xs:attribute name="fecha_publicacion">
+						<xs:simpleType>
+                            <xs:restriction base="xs:string">
+								<xs:pattern value="[0-9]*{2}/{1}[0-9]*{2}/{1}[0-9]*{2}"/>
+								<xs:length value="8"/>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+                <xs:sequence>
+			<xs:element name="revista" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="titulo_revista"/>
+						<xs:element name="numero_de_la_revista"/>
+                        <xs:element name="indice_revista"/>
+                        <xs:element name="seccion_revista"/>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="contenido_revista"/>
+                                        <xs:attribute name="inf">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+								                    <xs:length value="400"/>
+                                                </xs:restriction>
+						                    </xs:simpleType>
+                                </xs:sequence>
+                                <xs:attribute name="numero_de_pag">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:integer">
+								        <xs:minInclusive value="000"/>
+								        <xs:maxInclusive value="999"/>
+						            </xs:simpleType>
+                                </xs:attribute>
+						    </xs:complexType>
+                        </xs:element>
+					</xs:sequence>
+					<xs:attribute name="Id">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:minInclusive value="R0000"/>
+								<xs:maxInclusive value="R9999"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="tipo_clase">
+						<xs:simpleType>
+                            <xs:restriction base="xs:string">
+								<xs:enumeration value="informatica"/>
+                                <xs:enumeration value="corazon"/>
+                                <xs:enumeration value="coches"/>
+                                <xs:enumeration value="investigacion"/>
+                                <xs:enumeration value="otras"/>
+						</xs:simpleType>
+					</xs:attribute>
+                    <xs:attribute name="numero_de_paginas">
+						<xs:simpleType>
+                             <xs:restriction base="xs:integer">
 								<xs:minInclusive value="000"/>
 								<xs:maxInclusive value="999"/>
 						</xs:simpleType>

@@ -17,6 +17,7 @@
 								                    <xs:length value="50"/>
                                                 </xs:restriction>
 						                    </xs:simpleType>
+                                        </xs:attribute>
                                 </xs:sequence>
                                 <xs:attribute name="numero_de_paginas">
                                     <xs:simpleType>

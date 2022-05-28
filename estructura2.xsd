@@ -7,7 +7,7 @@
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="titulo" />
-						<xs:element name="capitulo">
+						<xs:element name="capitulo" minOccurs="0" maxOccurs="unbounded">
                             <xs:complexType>
                                 <xs:sequence>
                                     <xs:element name="contenido_cap" />
@@ -60,7 +60,7 @@
 			<xs:element name="periodico" minOccurs="0" maxOccurs="unbounded">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="seccion_periodico"/>
+						<xs:element name="seccion_periodico" minOccurs="0" maxOccurs="unbounded"/>
                             <xs:complexType>
                                 <xs:sequence>
                                     <xs:element name="articulo" />
@@ -131,7 +131,7 @@
 						<xs:element name="titulo_revista"/>
 						<xs:element name="numero_de_la_revista"/>
                         <xs:element name="indice_revista"/>
-                        <xs:element name="seccion_revista"/>
+                        <xs:element name="seccion_revista" minOccurs="0" maxOccurs="unbounded"/>
                             <xs:complexType>
                                 <xs:sequence>
                                     <xs:element name="contenido_revista"/>

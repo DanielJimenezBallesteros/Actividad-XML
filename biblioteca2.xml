@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Arriba se encuentra la instrucción de procesamiento o prólogo, 
 siempre tiene que ir en la primera línea de un documento XML-->
-
 <biblioteca2>
         <libro Id="L0001" tipo_clase="novela" numero_de_paginas="158">
             <!--el tipo de clase de libro será o novela, o infantil o didáctico-->
@@ -32,9 +31,7 @@ siempre tiene que ir en la primera línea de un documento XML-->
                 poder destruir la propia Eternidad...      
                 </sinopsis>
         </libro>
-
-        <periodico Id="P5001" tipo_clase="nacional" fecha_publicacion="21/05/2020">
-
+        <periodico Id="P5001" tipo_periodico="nacional" fecha_publicacion="21/05/2020">
             <seccion_periodico tipo_de_seccion="deportes">
                 <articulo autor="Julio Maldonado">
                     <contenido informacion="https://as.com/futbol/2019/06/01/champions/1559347333_749300.html?autoplay=1"/>
@@ -44,7 +41,7 @@ siempre tiene que ir en la primera línea de un documento XML-->
                 <articulo autor="Juan Gutiérrez">
                     <contenido informacion="https://as.com/opinion/2022/05/24/portada/1653423838_736216.html"/>
                 </articulo>
-                 <articulo autor="Juan Jiménez">
+                <articulo autor="Juan Jiménez">
                     <contenido informacion="https://as.com/opinion/2022/05/23/portada/1653301388_097885.html"/>
                 </articulo>
             </seccion_periodico>
@@ -60,8 +57,7 @@ siempre tiene que ir en la primera línea de un documento XML-->
                 3.Internacional............25
             </indice_periodico>
         </periodico>  
-    
-        <revista Id="R3501" tipo_clase="coches" numero_de_paginas="50">
+        <revista Id="R3501" tipo_revista="coches" numero_de_paginas="50">
             <titulo_revista>AUTOBILD</titulo_revista>
             <numero_de_la_revista>113</numero_de_la_revista>
             <indice_revista>
@@ -80,5 +76,4 @@ siempre tiene que ir en la primera línea de un documento XML-->
                     <contenido_revista inf="https://www.autobild.es/ultimo"/>
             </seccion_revista>
         </revista>
-
 </biblioteca2>

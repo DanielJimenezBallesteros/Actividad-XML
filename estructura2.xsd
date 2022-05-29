@@ -69,7 +69,7 @@
 						<xs:element name="seccion_periodico" minOccurs="0" maxOccurs="unbounded">
                             <xs:complexType>
                                 <xs:sequence>
-                                    <xs:element name="articulo">
+                                    <xs:element name="articulo" minOccurs="0" maxOccurs="unbounded">
                                         <xs:complexType>
                                             <xs:sequence>
                                                 <xs:element name="contenido">
@@ -127,7 +127,7 @@
                     <xs:attribute name="fecha_publicacion">
 						<xs:simpleType>
                             <xs:restriction base="xs:string">
-								<xs:maxLength value="8"/>
+								<xs:maxLength value="10"/>
                              </xs:restriction>
 						</xs:simpleType>
 					</xs:attribute>
@@ -144,11 +144,12 @@
                         <xs:element name="seccion_revista" minOccurs="0" maxOccurs="unbounded">
                             <xs:complexType>
                                 <xs:sequence>
-                                    <xs:element name="contenido_revista"/>
+                                    <xs:element name="contenido_revista">
                                         <xs:complexType>
-                                        <xs:sequence/>
-                                        <xs:attribute name="inf"/>
+                                            <xs:sequence/>
+                                                <xs:attribute name="inf"/>
                                         </xs:complexType>
+                                    </xs:element>
                                 </xs:sequence>
                                 <xs:attribute name="numero_de_pag">
                                     <xs:simpleType>
